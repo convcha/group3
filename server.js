@@ -6,6 +6,7 @@ var io = require('socket.io')(http);
 
 // 各種設定
 app.set('port', (process.env.PORT || 5000))
+  console.log('@@@@@@@@@@@@ PORT @@@@@@@@@@@@=' + process.env.PORT);
 app.use(express.static(__dirname + '/public'))
 
 // トップページへのリクエストをここで処理します
