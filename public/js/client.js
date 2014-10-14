@@ -118,3 +118,10 @@ function getLatLng() {
   var lng = $('#lng').val();
   return new google.maps.LatLng(lat, lng);
 }
+
+/**
+ * テストフォームの表示/非表示を切り替えます。
+ */
+function toggleTestForm() {
+  $('#test_form').toggle();
+}

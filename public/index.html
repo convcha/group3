@@ -48,10 +48,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Group3</a>
+          <span class="navbar-brand" style="cursor: pointer" onClick="toggleTestForm();">Group3</span>
         </div>
         <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left" id="test_form" role="search">
             <input type="button" value="移動" onClick="move();" class="btn btn-default" />
             <input type="button" value="シェイク" onClick="shake();" class="btn btn-default" />
             <div class="form-group">
@@ -59,6 +59,7 @@
               <input type="text" id="lat" class="form-control" placeholder="緯度" value="35.384304">
               <font color="white">経度</font>
               <input type="text" id="lng" class="form-control" placeholder="経度" value="139.470192">
+              <font color="white">左端のタイトルをクリックするとテストフォームの表示/非表示を切り替えられます</font>
             </div>
           </form>
         </div>
