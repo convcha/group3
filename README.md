@@ -4,10 +4,10 @@
 
 ## ローカル実行方法
 
-事前に[Git](http://git-scm.com/)、[Node.js](http://nodejs.org/)と[npm](https://www.npmjs.org/)がインストールされていることを確認してください。
+事前に[Git](http://msysgit.github.io/)、[Node.js](http://nodejs.org/)と[npm](https://www.npmjs.org/)がインストールされていることを確認してください。
 
 ```sh
-$ git clone git@172.16.30.71:9000/g3-server-2.git
+$ git clone http://172.16.30.71:10080/2014-kensyukai-group3/server.git
 $ cd g3-server-2
 $ npm install
 $ npm start
