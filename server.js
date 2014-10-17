@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var io = require('socket.io').listen(http);
 
 // 各種設定
 app.set('port', (process.env.PORT || 5000))
@@ -16,10 +16,11 @@ app.get('/', function(request, response) {
 
 // Socket.IOの処理
 // 新しいユーザーが接続されるとこの処理が走ります
-io.on('connection', function(socket) {
+io.sockets.on('connection', function(socket) {
   console.log('a user connected');
   // クライアント側でユーザーがmove処理をemitするとこの処理が走ります
   socket.on('move', function(latLng) {
+    console.log('@@@MOVE@@@=' + JSON.stringify(latLng));
     // move処理が実行されたことを他のユーザー全員に通知します
     socket.broadcast.emit('move', latLng);
   });;

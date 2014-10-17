@@ -10,7 +10,7 @@ var marker2;
  */
 function initialize() {
   // Socket.IOの初期設定
-  socket = io();
+  socket = io.connect();
   // 他のユーザがmove処理を実行した時にこの処理が走るよう設定
   socket.on('move', function(data) {
     var latLng = new google.maps.LatLng(data.lat, data.lng);
@@ -52,7 +52,8 @@ function setCurrentPosition(position) {
   // マーカーも表示
   markers[0] = new google.maps.Marker({
     map: map,
-    position: latLngs[0]
+    position: latLngs[0],
+    icon: "images/daanger.png"
   });
 }
 
