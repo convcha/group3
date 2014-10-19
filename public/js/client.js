@@ -53,7 +53,7 @@ function setCurrentPosition(position) {
   markers[0] = new google.maps.Marker({
     map: map,
     position: latLngs[0],
-    icon: "images/daanger.png"
+    icon: "images/face_1.png"
   });
 }
 
